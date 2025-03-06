@@ -2,7 +2,7 @@
 
 Notice: This is an edited clone of Ephesus Jekyll Theme - check it here [Ephesus](https://github.com/onepase/Ephesus).
 
-- **Demo:** https://majnioui.me/
+- **Demo:** https://coolest.moe/
 
 ### Features
 
@@ -28,8 +28,8 @@ Notice: This is an edited clone of Ephesus Jekyll Theme - check it here [Ephesus
 Run local server:
 
 ```bash
-$ git clone https://github.com/gr8cody/gr8cody.github.io.git
-$ cd gr8cody.github.io
+$ git clone [https://github.com/majnioui/Moe-Blog.git](https://github.com/majnioui/Moe-Blog.git)
+$ cd Moe-Blog
 $ bundle install
 $ bundle exec jekyll build
 $ bundle exec jekyll serve
@@ -43,4 +43,4 @@ To use a math formula in a post, use the mathjax:true tag in the post.
 
 ## License
 
-This project is open source and available under the [MIT License](LICENSE.md).
+This open-source project is available under the [MIT License](LICENSE.md).
