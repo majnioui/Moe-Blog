@@ -28,7 +28,7 @@ Notice: This is an edited clone of Ephesus Jekyll Theme - check it here [Ephesus
 Run local server:
 
 ```bash
-$ git clone [https://github.com/majnioui/Moe-Blog.git](https://github.com/majnioui/Moe-Blog.git)
+$ git clone https://github.com/majnioui/Moe-Blog.git
 $ cd Moe-Blog
 $ bundle install
 $ bundle exec jekyll build
