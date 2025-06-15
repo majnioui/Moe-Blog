@@ -1,20 +1,20 @@
 # Site settings
-site: Moe's Blog
-title: Moe El Majnioui
+site: Mohamed El Majnioui's Blog
+title: Mohamed El Majnioui - IT Consultant / Developer
 keywords: personal, blog, developer, it consultant, oss
 description: >-
-    Moe - Blog
+    Mohamed El Majnioui - Blog
 lang: en-US
 timezone:  Africa/Casablanca
 repo: https://github.com/majnioui/majnioui.github.io
 
 # Author settings
 author:
-  name: Moe El Majnioui
-  bio: Full-Stack developer <br> IT Consultant.<br> OSS
+  name: Mohamed El Majnioui
+  bio: IT Consultant / Developer<br> OSS
   picture: assets/images/profile.webp
   github: majnioui
-  twitter: _marocain
+  twitter: m_majnioui
   instagram: m.majnioui
   linkedin: elmajnioui
   email: mo@majnioui.me
