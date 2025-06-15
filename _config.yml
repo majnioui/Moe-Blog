@@ -2,8 +2,7 @@
 site: Mohamed El Majnioui - Personal blog
 title: Mohamed El Majnioui
 keywords: personal, blog, developer, it consultant, oss, ibm, security, apm, monitoring, observability, ruby, rails, nextjs, databases, ibm guardium, ibm instana, ibm sevone, programming, software development, cloud computing, devops
-description: >-
-    Personal blog.
+description: Personal blog.
 lang: en-US
 timezone:  Africa/Casablanca
 repo: https://github.com/majnioui/majnioui.github.io
