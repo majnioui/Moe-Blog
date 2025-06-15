@@ -241,11 +241,11 @@ pre{font-size: 14px; max-width: 90vw; overflow: auto; padding-left: 15px;}
   align-items: center;
   gap: 8px;
 }
-.project-meta img {
+.project-icons img {
   height: 22px;
   vertical-align: middle;
 }
-.project-meta .external-link {
+.project-icons .external-link {
   height: 20px;
   margin-left: 8px;
 }
