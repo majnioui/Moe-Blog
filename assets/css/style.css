@@ -259,13 +259,14 @@ pre{font-size: 14px; max-width: 90vw; overflow: auto; padding-left: 15px;}
   font-size: 0.95em;
 }
 .project-image {
-  width: 120px;
-  height: 80px;
+  width: 180px;
+  height: 130px;
   object-fit: cover;
   border-radius: 8px;
   box-shadow: 0 1px 4px rgba(0,0,0,0.07);
   flex: 0 0 auto;
 }
+
 @media only screen and (max-width: 768px) {
   .project-item {
     flex-direction: row;
@@ -295,4 +296,21 @@ pre{font-size: 14px; max-width: 90vw; overflow: auto; padding-left: 15px;}
     max-height: 60px;
     margin: 0;
   }
+}
+
+.nav-row {
+  display: flex;
+  gap: 8px;
+  justify-content: flex-end;
+}
+
+.nav-row a {
+  font-size: 1.18em;
+  font-weight: 400;
+  text-decoration: underline;
+}
+
+.nav-row a:hover {
+  color: #9a9a9a;
+  text-decoration: underline;
 }
