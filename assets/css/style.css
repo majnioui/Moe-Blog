@@ -195,12 +195,12 @@ pre{font-size: 14px; max-width: 90vw; overflow: auto; padding-left: 15px;}
   h1{font-size: 1.5rem;}
   .profile-image{width: 96px; height: 96px;}
   .project-meta-wrapper {
-    order: 2;
+    order: 1;
     width: 100%;
     margin-top: 8px;
   }
   .project-desc {
-    order: 1;
+    order: 3;
   }
   .project-image {
     order: 0;
@@ -288,6 +288,9 @@ pre{font-size: 14px; max-width: 90vw; overflow: auto; padding-left: 15px;}
   .project-meta {
     width: 100%;
     justify-content: flex-start;
+  }
+  .project-langs {
+    display: none;
   }
 }
 
