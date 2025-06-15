@@ -13,13 +13,13 @@ Coolify is a free, open-source tool that allows you to easily self-host applicat
 
 ## Why Choose Hetzner?
 
-Two words: wallet-friendly. 💸 Plus, Hetzner recently added a one-click install for Coolify, which makes setting it up a breeze like literally zero hassle.
+Two words: wallet-friendly. Plus, Hetzner recently added a one-click install for Coolify, which makes setting it up a breeze like literally zero hassle.
 
 ## What You Need Before We Dive In
 
 Make sure you have these goodies:
 
-- A domain name (I grabbed mine from Porkbun, cause it’s fun to say 😂)
+- A domain name (I grabbed mine from Porkbun :D)
 
 - A Hetzner Cloud server (I went with the €4.51/month option, nice and affordable)
 
@@ -64,7 +64,7 @@ Using your terminal, SSH into the server with the following command:
 
 ```
 
-Replace `<your-server-ip>` with your actual IP. It will ask for the password from Hetzner, and then you'll be asked to set a new root password. Pick a good one and write it down somewhere no sticky notes, please. 😅
+Replace `<your-server-ip>` with your actual IP. It will ask for the password from Hetzner, and then you'll be asked to set a new root password. Pick a good one and write it down somewhere no sticky notes, please.
 
 Coolify will automatically start installing. You’ll get a link to the dashboard, which will look something like this:
 
@@ -148,7 +148,7 @@ For added security, set up a firewall on Hetzner:
 
 ![Image](/assets/images/blog/firewallapply.png)
 
-3. Once the firewall is enabled, Coolify will only be accessible via your custom domain `https://coolify.<your-domain>` plus, HTTPS is all taken care of by Coolify. No need to stress over SSL certificates. 😊
+3. Once the firewall is enabled, Coolify will only be accessible via your custom domain `https://coolify.<your-domain>` plus, HTTPS is all taken care of by Coolify. No need to stress over SSL certificates.
 
 ## The Grand Finale
 
