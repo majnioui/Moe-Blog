@@ -22,12 +22,10 @@
 			{% if site.author.linkedin %}
 				<a href="https://linkedin.com/in/{{site.author.linkedin}}" target="_blank"><img alt="Linkedin" src="assets/images/icon/linkedin.svg" class="social-icon"></a>
 			{% endif %}
-			<div class="mode" style="margin-left: 5px;" id="mode-switcher" onclick="toggleNightMode();">
+			<div class="mode" id="mode-switcher" onclick="toggleNightMode();">
 				<span></span>
 			</div>
-			<br>
-			{{ site.author.bio }}
-			<br>
+			<p class="profile-bio">{{ site.author.bio }}</p>
 			<div class="nav-row">
 				<a href="/">home</a>
 				<a href="/projects">projects</a>
