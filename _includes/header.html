@@ -1,17 +1,45 @@
 <!DOCTYPE html>
-<html lang="{{site.lang}}" data-theme="light">
+<html lang="{{ site.lang | default: 'en-US' }}" data-theme="light">
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0,viewport-fit=cover">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<base href="{{ site.url }}" />
+		<base href="{{ site.url }}/" />
 		{% seo %}
-		<link rel="stylesheet" href="assets/css/highlight.css">
-		<link rel="stylesheet" href="assets/css/style.css">
-		<link rel="shortcut icon" href="assets/images/favicon.png" />
+		<link rel="stylesheet" href="{{ '/assets/css/highlight.css' | relative_url }}">
+		<link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+		<link rel="icon" href="{{ '/assets/images/favicon.png' | relative_url }}" type="image/png">
 		<link rel="alternate" type="application/atom+xml" title="{{ site.title }}" href="{{ site.url }}/atom.xml">
-		<link rel="alternate" type="application/json" title="{{ site.title }}" href="{{ site.url }}/feed.json" />
-		<link rel="sitemap" type="application/xml" title="sitemap" href="{{ site.url }}/sitemap.xml" />
-		<meta name="google-site-verification" content="{{site.google_verify}}" />
+		<link rel="alternate" type="application/json" title="{{ site.title }}" href="{{ site.url }}/feed.json">
+		<link rel="sitemap" type="application/xml" href="{{ site.url }}/sitemap.xml">
+		<script type="application/ld+json">
+		{
+			"@context": "https://schema.org",
+			"@type": "Person",
+			"name": "{{ site.author.name | escape }}",
+			"url": "{{ site.url }}",
+			"description": "{{ site.author.bio | escape }}",
+			"image": "{{ site.url }}/{{ site.author.picture }}",
+			"sameAs": [
+				{% assign first = true %}
+				{% if site.author.github %}{% unless first %},{% endunless %} "https://github.com/{{ site.author.github }}"{% assign first = false %}{% endif %}
+				{% if site.author.twitter %}{% unless first %},{% endunless %} "https://twitter.com/{{ site.author.twitter }}"{% assign first = false %}{% endif %}
+				{% if site.author.linkedin %}{% unless first %},{% endunless %} "https://linkedin.com/in/{{ site.author.linkedin }}"{% assign first = false %}{% endif %}
+				{% if site.author.instagram %}{% unless first %},{% endunless %} "https://instagram.com/{{ site.author.instagram }}"{% assign first = false %}{% endif %}
+			]
+		}
+		</script>
+		{% if page.url == '/' or page.url == '/index.html' %}
+		<script type="application/ld+json">
+		{
+			"@context": "https://schema.org",
+			"@type": "WebSite",
+			"name": "{{ site.title | escape }}",
+			"url": "{{ site.url }}",
+			"description": "{{ site.description | escape }}",
+			"author": { "@type": "Person", "name": "{{ site.author.name | escape }}" }
+		}
+		</script>
+		{% endif %}
 	</head>
 <body>

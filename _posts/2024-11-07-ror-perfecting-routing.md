@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Ruby on Rails: Perfecting Routing"
+description: "How Rails routing works: resources, RESTful routes, and config/routes.rb. A concise guide to perfecting routing in Ruby on Rails."
 date: 2024-10-13 12:00:00 -0500
 categories: [web development, ruby on rails]
 tags: [routing, rails, restful, api]

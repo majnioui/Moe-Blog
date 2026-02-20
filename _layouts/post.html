@@ -6,26 +6,49 @@ layout: default
     src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
 </script>
 {% endif %}
-<div class="post-header">
-	<div class="post-date">{{ page.date | date: "%d.%m.%Y" }}</div>
+{% assign post_url = page.url | prepend: site.url %}
+{% assign post_desc = page.description | default: page.excerpt | strip_html | strip_newlines | truncate: 160 %}
+<script type="application/ld+json">
+{
+	"@context": "https://schema.org",
+	"@type": "BlogPosting",
+	"headline": "{{ page.title | escape }}",
+	"url": "{{ post_url }}",
+	"datePublished": "{{ page.date | date_to_xmlschema }}",
+	"dateModified": "{{ page.last_modified_at | default: page.date | date_to_xmlschema }}",
+	"author": {
+		"@type": "Person",
+		"name": "{{ site.author.name | escape }}",
+		"url": "{{ site.url }}"
+	},
+	"publisher": {
+		"@type": "Person",
+		"name": "{{ site.author.name | escape }}",
+		"url": "{{ site.url }}"
+	},
+	"description": "{{ post_desc | escape }}"
+}
+</script>
+<div class="post-header" aria-label="Article meta">
+	<div class="post-date"><time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%d.%m.%Y" }}</time></div>
 	<div class="post-share">
 		<span class="post-share-label">Share</span>
-		<a href="https://www.facebook.com/sharer/sharer.php?u={{site.url}}/{{page.slug}}" target="_blank"><img alt="Facebook" src="assets/images/icon/facebook.svg" class="social-icon"></a>
-		<a href="https://twitter.com/intent/tweet?source=tweetbutton&amp;original_referer={{site.url}}/{{page.slug}}&amp;text={{page.title}} - {{site.url}}/{{page.slug}}" target="_blank"><img alt="X" src="assets/images/icon/x.svg" class="social-icon" style="width: 20px;"></a>
-		<a href="https://api.whatsapp.com/send?text={{site.url}}/{{page.slug}}" target="_blank"><img alt="Whatsapp" src="assets/images/icon/whatsapp.svg" class="social-icon"></a>
+		<a href="https://www.facebook.com/sharer/sharer.php?u={{ post_url }}" target="_blank" rel="noopener noreferrer"><img alt="Share on Facebook" src="{{ '/assets/images/icon/facebook.svg' | relative_url }}" class="social-icon"></a>
+		<a href="https://twitter.com/intent/tweet?text={{ page.title | url_encode }}&amp;url={{ post_url | url_encode }}" target="_blank" rel="noopener noreferrer"><img alt="Share on X" src="{{ '/assets/images/icon/x.svg' | relative_url }}" class="social-icon" style="width: 20px;"></a>
+		<a href="https://api.whatsapp.com/send?text={{ page.title | url_encode }}%20{{ post_url | url_encode }}" target="_blank" rel="noopener noreferrer"><img alt="Share on WhatsApp" src="{{ '/assets/images/icon/whatsapp.svg' | relative_url }}" class="social-icon"></a>
 	</div>
 </div>
 
-<div class="blog-post-content">
-	<h1>{{page.title}}</h1>
+<article class="blog-post-content">
+	<h1>{{ page.title }}</h1>
 	{{ content }}
-</div>
+</article>
 
-<div class="navigation">
+<nav class="navigation" aria-label="Previous and next posts">
 	{% if page.previous %}
 		<a class="prev" href="{{ page.previous | relative_url }}">< {{ page.previous.title }}</a>
 	{% endif %} {% if page.next %}
 	<a class="next" href="{{ page.next | relative_url }}">{{ page.next.title }} ></a>
 {% endif %}
-</div>
+</nav>
 {% include comments.html %}

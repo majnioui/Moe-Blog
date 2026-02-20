@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Self-Host Your Website with Coolify and Hetzner"
+description: "Step-by-step guide to self-hosting Next.js and other apps with Coolify on Hetzner Cloud."
 date: 2024-11-07 15:31:00 -0500
 categories: [guide]
 tags: [hetzner, nextjs, coolify, self host]

@@ -1,7 +1,7 @@
 {% include header.html %}
-<div class="container">
-	<div class="profile">
-		<a href="{{ site.url }}"><img alt="Moe" src="{{site.author.picture}}" class="profile-image"></a>
+<main class="container" id="main-content">
+	<header class="profile" aria-label="About">
+		<a href="{{ site.url }}/"><img alt="{{ site.author.name }} - profile photo" src="{{ site.author.picture | relative_url }}" class="profile-image" width="80" height="80"></a>
 		<div class="profile-about">
 			<h2 title="the coolest Moe." style="margin-bottom: 0; font-weight: 700;">{{site.author.name}}</h2>
 			{% if site.author.facebook %}
@@ -26,15 +26,15 @@
 				<span></span>
 			</div>
 			<p class="profile-bio">{{ site.author.bio }}</p>
-			<div class="nav-row">
-				<a href="/">home</a>
-				<a href="/projects">projects</a>
-			</div>
+			<nav class="nav-row" aria-label="Main">
+				<a href="{{ '/' | relative_url }}">home</a>
+				<a href="{{ '/projects' | relative_url }}">projects</a>
+			</nav>
 		</div>
-	</div>
+	</header>
 	{{ content }}
-	<div class="footer">
+	<footer class="footer" role="contentinfo">
 		<span>Moe.</span>
-	</div>
-</div>
+	</footer>
+</main>
 {% include footer.html %}
